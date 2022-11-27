@@ -1,5 +1,5 @@
 from email.message import EmailMessage 
-
+from emailApp import password
 import ssl
 
 try:
@@ -12,16 +12,14 @@ else:
     ssl._create_default_https_context = _create_unverified_https_context
 import smtplib
 
-email_sender = 'lilyriddlegranger@mail.com'
-email_password = 'xzzyfmvfnjlygtuc'
+email_sender = 'example@mail.com'
+email_password = password
 
 
-email_receiver = 'ilef.boualleeg@gmail.com'
-subject = "Study hard"
+email_receiver = 'example2@gmail.com'
+subject = "Hello World"
 body = """
-    You must work hard to be proud of yourself 
-    and make your goals a reality!
-    Keep going Ilef! You're so close!
+    First project!
 """
 em = EmailMessage()
 em['From'] = email_sender
